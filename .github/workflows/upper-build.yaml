@@ -26,5 +26,5 @@ jobs:
         go build
         ls
         go test
-        ./upper ABC
+        ./upper abc
        working-directory: upper
