@@ -27,3 +27,4 @@ jobs:
         ls
         go test
         ./upper ABC
+       working-directory: upper
