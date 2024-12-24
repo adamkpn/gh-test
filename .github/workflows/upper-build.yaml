@@ -1,11 +1,11 @@
 name: upper-build
 
-on:  
+on:
   push:
     paths:
       - ".github/workflows/upper-build.yaml"
-      - 'upper/**'
-  workflow_dispatch: 
+      - "upper/**"
+  workflow_dispatch:
 
 jobs:
   build:
@@ -16,5 +16,8 @@ jobs:
       - name: Go Version
         run: go version
 
-      - uses: actions/checkout@v4
-      
+      - uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+
+      - run: go version
