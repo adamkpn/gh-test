@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Go Version
-        run: go version
-
-      - uses: actions/setup-go@v5
-        with:
-          go-version: '1.22'
-
-      - run: go version
+     - run: pwd && ls -l
+     - uses: actions/checkout@v4.2.0
+     - run: pwd && ls -l
+     - run: go version
+     - uses: actions/setup-go@v5.2.0
+       with:
+         go-version: 1.22
+     - run: go version
